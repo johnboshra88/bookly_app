@@ -1,3 +1,4 @@
+import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custome_app_bar.dart';
@@ -19,10 +20,7 @@ class HomeViewBody extends StatelessWidget {
           CustomAppBar(),
           FeaturedListViewItem(),
           FeatureBooksListView(),
-          Text(
-            'Best Seller',
-            style: Styles.titleMedium,
-          ),
+          Text('Best Seller', style: Styles.textStyle18),
           BestSellerListViewItem()
         ],
       ),
