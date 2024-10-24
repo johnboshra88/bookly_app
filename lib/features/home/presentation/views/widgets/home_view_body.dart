@@ -23,7 +23,9 @@ class HomeViewBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: CustomAppBar(),
               ),
-              CustomBookImage(),
+              CustomBookImage(
+                imageUrl: 'https://images.app.goo.gl/jP3pJwUgy38ZEwq17',
+              ),
               FeatureBooksListView(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
