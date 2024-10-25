@@ -18,7 +18,11 @@ class HomeRepoImplemntation implements HomeRepo {
 
       List<BookModel> books = [];
       for (var item in data['items']) {
-        books.add(BookModel.fromJson(item));
+        try {
+          books.add(BookModel.fromJson(item));
+        } catch (e) {
+          print(item);
+        }
       }
       return right(books);
     } catch (e) {
@@ -33,7 +37,8 @@ class HomeRepoImplemntation implements HomeRepo {
   Future<Either<Failures, List<BookModel>>> fetchFeatureBooks() async {
     try {
       var data = await apiService.get(
-          endPoints: 'volumes?Filtering=free-ebooks&q=subject:Programming');
+          endPoints:
+              'volumes?Filtering=free-ebooks&q=subject:computer science');
 
       List<BookModel> books = [];
       for (var item in data['items']) {
